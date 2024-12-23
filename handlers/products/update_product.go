@@ -54,6 +54,6 @@ func Put(db *sql.DB) gin.HandlerFunc {
 			return
 		}
 
-		c.JSON(http.StatusOK, gin.H{"message": "Customer updated successfully", "data": currentProduct})
+		c.JSON(http.StatusOK, gin.H{"message": "Product updated successfully", "data": currentProduct})
 	}
 }

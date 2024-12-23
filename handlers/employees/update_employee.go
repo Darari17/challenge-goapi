@@ -57,39 +57,3 @@ func Put(db *sql.DB) gin.HandlerFunc {
 		c.JSON(http.StatusOK, gin.H{"message": "Employee updated successfully", "data": currentEmployee})
 	}
 }
-
-/*
-Request :
-
-- Method : PUT
-- Endpoint : `/employees/:id` atau `/employees/` jika semua data
-- Header :
-  - Content-Type : application/json
-  - Accept : application/json
-- Body :
-
-```json
-{
-  "name": "string",
-  "phoneNumber": "string",
-  "address": "string"
-}
-```
-
-Response :
-
-- Status : 200 OK
-- Body :
-
-```json
-{
-  "message": "string",
-  "data": {
-    "id": "string",
-    "name": "string",
-    "phoneNumber": "string",
-    "address": "string"
-  }
-}
-```
-*/
